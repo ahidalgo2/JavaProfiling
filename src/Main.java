@@ -1,33 +1,30 @@
 import java.io.IOException;
 
-
 public class Main {
 
 	public static void main(String[] args) throws IOException {
 		Main main = new Main();
 
-		System.out.print("Main thread started");
+		System.out.println("Main thread sleeping");
 		try {
 			Thread.sleep(30000L);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// ...
 		}
-		System.out.print("Main thread continues");
+		System.out.print("Main thread executing");
 
-		main.CPUProfiling();
-		main.threadProfiling();
-		main.memoryProfiling();
+		//main.CPUProfiling();
+		//main.threadProfiling();
+		 main.memoryProfiling();
 
 		try {
 			Thread.sleep(60000L);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// ...
 		}
 	}
 
-	private synchronized void threadProfiling() {
+	private void threadProfiling() {
 		LoggingThread loggingThread1 = new LoggingThread();
 		LoggingThread loggingThread2 = new LoggingThread();
 		LoggingThread loggingThread3 = new LoggingThread();

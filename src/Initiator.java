@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.Set;
 
 public class Initiator {
-	Set<Integer> collection;
+	List<Integer> collection;
 
 	public Initiator() {
-		collection = new HashSet<Integer>();
+		collection = new LinkedList<Integer>();
 	}
 
 	// Creates a list of unique elements
